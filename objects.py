@@ -23,7 +23,7 @@ class Polygon:
         self.dimension = dimension
         self.node = [Node(i) for i in range(dimension)]
     def Show_Details(self):
-        print "Name:",self.name,"\nDimension:",self.dimension
+        print "Name:",self.name,"\nDimension:",len(self.node)
         print "\nNodes:"
         for nodes in self.node:
             nodes.Show_Details()
