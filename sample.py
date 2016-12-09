@@ -11,6 +11,6 @@ class Sample :
 	def __init__(self, p) :
 		self.path = p
 		self.sound = AudioSegment.from_wav("Samples/Xylophone.wav")
-
+	
 	def play(self) :
 		play(self.sound)

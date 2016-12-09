@@ -7,8 +7,17 @@ class Node:
     def __init__(self):
     	pass
 
-    def Load_Sample(self, sample):
+    def load_sample(self, sample):
         self.sample = sample
 
-    def Remove_Sample(self):
+    def remove_sample(self):
         self.sample = None
+
+    def has_sample(self) :
+    	if self.sample == None :
+    		return False
+    	else :
+    		return True
+
+    def to_audiosegment(self) :
+    	return self.sample.sound

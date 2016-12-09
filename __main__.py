@@ -4,22 +4,29 @@
 from polygon import Polygon
 from node import Node
 from sample import Sample
+from transport import Transport
+from poly_container import PolyContainer
+from pydub.playback import play
+from pydub import AudioSegment
 
-# polya = Polygon('polya', 2)
-# polya.node[1].Load_Sample("sample/test.wav")
-# polya.Add_Node()
-# polya.Add_Node()
-# polya.Show_Details()
-# polya.Reset()
-# polya.Show_Details()
+transport = Transport(120)
+pc = PolyContainer(transport)
+transport.set_polycontainer(pc)
 
+poly = pc.new("test", 5)
+xylo = Sample("Samples/Xylophone.wav")
+poly.set_node(0, xylo)
+poly.set_node(1, xylo)
+poly.set_node(2, xylo)
+poly.set_node(4, xylo)
 
-sample = Sample("Samples/Xylophone.wav")
-sample.play()
+print("Length = ", transport.track_length())
 
-'''
-nodia = Node(0)
-nodia.Show_Details()
-nodia.Load_Sample("samples/test.wav")
-nodia.Show_Details()
-'''
+transport.generate_sound()
+transport.play()
+
+# track = AudioSegment.silent(duration = 2000)
+# xylo = AudioSegment.from_wav("Samples/Xylophone.wav")
+# track = track.overlay(xylo)
+# play(track)
+
