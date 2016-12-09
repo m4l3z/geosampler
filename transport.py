@@ -33,4 +33,8 @@ class Transport :
 	def play(self) :
 		play(self.track)
 
+	def play_loop(self) :
+		while True :
+			self.play()
+
 

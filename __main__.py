@@ -23,7 +23,7 @@ poly.set_node(4, xylo)
 print("Length = ", transport.track_length())
 
 transport.generate_sound()
-transport.play()
+transport.play_loop()
 
 # track = AudioSegment.silent(duration = 2000)
 # xylo = AudioSegment.from_wav("Samples/Xylophone.wav")
