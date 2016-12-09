@@ -13,11 +13,11 @@ class Polygon:
         self.dimension = dimension
         reset()
 
-    def Show_Details(self):
+    def show_details(self):
         print("Name:",self.name,"\nDimension:",len(self.nodes))
         print("\nNodes:")
         for n in self.nodes:
-            n.Show_Details()
+            n.show_details()
 
     def append_node(self):
         self.nodes.append(Node(len(self.nodes)))
