@@ -3,7 +3,7 @@
 
 from pydub import AudioSegment
 from pydub.playback import play
-from sample import Sample
+from audio.sample import Sample
 
 class Transport :
 	bpm = 120
@@ -25,7 +25,6 @@ class Transport :
 		for p in self.polys :
 			timeline += p.get_timeline()
 		for n in timeline :
-			print(n)
 			if n["node"].has_sample() :
 				self.track = self.track.overlay(n["node"].to_audiosegment(), position = n["time"])
 

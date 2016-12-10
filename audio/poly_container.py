@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from polygon import Polygon
+from audio.polygon import Polygon
 
 class PolyContainer :
 	polys = list()

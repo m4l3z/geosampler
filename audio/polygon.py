@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from node import Node
+from audio.node import Node
 from lxml import etree
 
 class Polygon: 
